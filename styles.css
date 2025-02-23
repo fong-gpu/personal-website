@@ -1,0 +1,354 @@
+/* 全局样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: #1a1a1a;
+    background-color: #ffffff;
+}
+
+/* 头部样式 */
+header {
+    background: linear-gradient(135deg, #012169 0%, #003087 100%);
+    padding: 4rem 2rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    font-size: 3.5rem;
+    font-weight: 300;
+    letter-spacing: -1px;
+}
+
+.counter {
+    color: rgba(255,255,255,0.9);
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+
+/* 主要内容区域 */
+main {
+    max-width: 1400px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+
+section {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 3rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+}
+
+section h2 {
+    color: #012169;
+    margin-bottom: 2rem;
+    font-size: 2.2rem;
+    font-weight: 400;
+    border-bottom: none;
+    position: relative;
+}
+
+section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: #012169;
+}
+
+/* 个人资料样式 */
+.profile {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.profile-content h3 {
+    color: #012169;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.profile .title {
+    color: #444;
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+}
+
+.profile .description {
+    color: #555;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.skill-tag {
+    background-color: rgba(1, 33, 105, 0.1);
+    color: #012169;
+    padding: 0.8rem 1.5rem;
+    border-radius: 30px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+    background-color: #012169;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* 时间线样式 */
+.timeline {
+    margin-top: 4rem;
+    position: relative;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 100px;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background: rgba(1, 33, 105, 0.2);
+}
+
+.timeline-item {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 3rem;
+    margin-bottom: 2rem;
+    position: relative;
+    padding-left: 2rem;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 94px;
+    top: 8px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #012169;
+    border: 3px solid white;
+}
+
+.timeline-date {
+    color: #012169;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.timeline-content {
+    background: rgba(1, 33, 105, 0.03);
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.timeline-content h4 {
+    color: #012169;
+    margin-bottom: 0.8rem;
+    font-size: 1.3rem;
+}
+
+/* 文章列表样式 */
+.article-list article {
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    background: rgba(1, 33, 105, 0.02);
+    transition: all 0.3s ease;
+}
+
+.article-list article:hover {
+    background: rgba(1, 33, 105, 0.05);
+    transform: translateX(10px);
+}
+
+.article-list h3 {
+    color: #012169;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+/* 笔记列表样式 */
+.note-list .note {
+    background: linear-gradient(135deg, rgba(1, 33, 105, 0.05) 0%, rgba(1, 33, 105, 0.02) 100%);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid #012169;
+    transition: all 0.3s ease;
+}
+
+.note-list .note:hover {
+    transform: translateX(10px);
+    background: linear-gradient(135deg, rgba(1, 33, 105, 0.08) 0%, rgba(1, 33, 105, 0.04) 100%);
+}
+
+/* 联系表单样式 */
+#contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 600px;
+}
+
+#contactForm input {
+    padding: 1rem;
+    border: 2px solid rgba(1, 33, 105, 0.1);
+    border-radius: 8px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+#contactForm input:focus {
+    border-color: #012169;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(1, 33, 105, 0.1);
+}
+
+#contactForm button {
+    background: linear-gradient(135deg, #012169 0%, #003087 100%);
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#contactForm button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(1, 33, 105, 0.2);
+}
+
+/* 页脚样式 */
+footer {
+    text-align: center;
+    padding: 3rem;
+    color: #555;
+    background: linear-gradient(135deg, rgba(1, 33, 105, 0.05) 0%, rgba(1, 33, 105, 0.02) 100%);
+    margin-top: 4rem;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+    
+    main {
+        padding: 2rem 1rem;
+    }
+    
+    section {
+        padding: 2rem 1.5rem;
+    }
+    
+    .timeline::before {
+        left: 20px;
+    }
+    
+    .timeline-item {
+        grid-template-columns: 1fr;
+        padding-left: 40px;
+    }
+    
+    .timeline-item::before {
+        left: 14px;
+    }
+    
+    .timeline-date {
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* 文章页面样式 */
+.full-article {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.article-meta {
+    margin: 1rem 0 2rem;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.article-meta span {
+    margin-right: 2rem;
+}
+
+.article-content {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.article-content h3 {
+    color: #012169;
+    margin: 2rem 0 1rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.article-content p {
+    margin-bottom: 1.5rem;
+}
+
+.article-content ul,
+.article-content ol {
+    margin: 1rem 0 1.5rem 2rem;
+}
+
+.article-content li {
+    margin-bottom: 0.5rem;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #012169;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.read-more:hover {
+    color: #003087;
+    transform: translateX(5px);
+} 
